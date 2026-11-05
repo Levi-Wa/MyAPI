@@ -11,9 +11,9 @@ public class CounterpartiesTable : ITableInitializer
     {
         const string sql = """
             CREATE TABLE IF NOT EXISTS counterparties (
-                counterparty_id  INTEGER PRIMARY KEY AUTOINCREMENT,
-                name             TEXT    NOT NULL,
-                type             TEXT    NOT NULL
+                counterparty_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                type TEXT NOT NULL
             );
             """;
 

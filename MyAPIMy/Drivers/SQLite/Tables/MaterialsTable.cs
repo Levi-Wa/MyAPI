@@ -18,13 +18,6 @@ public class MaterialsTable : ITableInitializer
                 profile_size TEXT NOT NULL,
                 unit_id INTEGER NOT NULL,
                 stock_norm NUMERIC NOT NULL DEFAULT 0,
-
-                CONSTRAINT chk_material_stock_norm
-                    CHECK (stock_norm >= 0),
-
-                CONSTRAINT fk_materials_unit
-                    FOREIGN KEY (unit_id)
-                    REFERENCES units_measure (unit_id)
             );
             """;
 
