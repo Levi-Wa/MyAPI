@@ -14,7 +14,7 @@ public class CounterpartiesTable : ITableInitializer
                 counterparty_id INT AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(100) NOT NULL,
                 type VARCHAR(50) NOT NULL
-            ); 
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; 
             """;
 
         using var command = connection.CreateCommand();

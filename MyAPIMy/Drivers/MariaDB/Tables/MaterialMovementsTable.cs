@@ -17,7 +17,7 @@ public class MaterialMovementsTable : ITableInitializer
                 document_price DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
                 income DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
                 expense DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
-            ); 
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
             """;
 
         using var command = connection.CreateCommand();

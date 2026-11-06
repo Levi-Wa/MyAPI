@@ -18,7 +18,7 @@ public class MaterialsTable : ITableInitializer
                 profile_size VARCHAR(50) NOT NULL,
                 unit_id INT NOT NULL,
                 stock_norm DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
-            );
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
             """;
 
         using var command = connection.CreateCommand();

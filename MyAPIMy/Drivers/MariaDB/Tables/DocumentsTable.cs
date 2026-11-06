@@ -16,8 +16,7 @@ public class DocumentsTable : ITableInitializer
                 record_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 counterparty_id INT UNSIGNED NOT NULL,
                 document_type INT NOT NULL,
-
-            );
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
             """;
 
         using var command = connection.CreateCommand();

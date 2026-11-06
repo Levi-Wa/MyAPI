@@ -14,7 +14,7 @@ public class UnitsMeasureTable : ITableInitializer
                 unit_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(50) NOT NULL,
                 symbol VARCHAR(10) NOT NULL
-            );
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
             """;
 
         using var command = connection.CreateCommand();
