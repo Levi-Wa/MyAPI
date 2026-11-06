@@ -17,7 +17,7 @@ public class DatabaseInitializer
         ])
         .OrderBy(t => t.Order)
         .ToList();
-    }
+    } // возникнет в рандомном парядке,  асинхорность, добавить порядок создания таблиц, нужна струткура которая гарантирует запуск в определеом порядке 
 
     public void Initialize(MySqlConnection connection)
     {
