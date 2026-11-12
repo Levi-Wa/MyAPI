@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "69b7UhYu8Xw=",
+  "dgSpecHash": "C9Fn888tMkc=",
   "success": true,
-  "projectFilePath": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Drivers\\MariaDB\\MariaDB.csproj",
+  "projectFilePath": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Drivers\\MariaDB\\MariaDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",

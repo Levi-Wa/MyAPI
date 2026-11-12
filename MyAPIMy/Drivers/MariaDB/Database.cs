@@ -8,7 +8,7 @@ namespace MyAPP.Drivers.MariaDB;
 public class Database : IDatabase
 {
     private readonly string? _connectionString;
-    private readonly DatabaseInitializer _initializer;
+    private readonly DatabaseInitializer? _initializer;
 
     public ICounterparties Counterparties { get; set; } = null!;
     public IDocuments Documents { get; set; } = null!;
@@ -16,10 +16,19 @@ public class Database : IDatabase
     public IMaterials Materials { get; set; } = null!;
     public IUnitsMeasure UnitsMeasure { get; set; } = null!;
 
+    private static readonly Dictionary<TableId, Action<MySqlConnection>> creators = new()
+    {
+        [TableId.UnitsMeasureTable] = UnitsMeasureTable.EnsureTableCreated,
+        [TableId.CounterpartiesTable] = CounterpartiesTable.EnsureTableCreated,
+        [TableId.MaterialsTable] = MaterialsTable.EnsureTableCreated,
+        [TableId.DocumentsTable] = DocumentsTable.EnsureTableCreated,
+        [TableId.MaterialMovementsTable] = MaterialMovementsTable.EnsureTableCreated,
+    };
+
     public Database(string? connectionString = null, DatabaseInitializer? initializer = null)
     {
         _connectionString = connectionString;
-        _initializer = initializer ?? new DatabaseInitializer();
+        _initializer = initializer;
     }
 
     public void Initialize()
@@ -29,28 +38,64 @@ public class Database : IDatabase
             throw new InvalidOperationException("Connection string is not configured.");
         }
 
+        // а) сначала пройти по TableOrder.Creation и проверить, что для каждого TableId есть запись в creators;
+        // если нет, выбросить InvalidOperationException ещё до создания первой таблицы;
+        foreach (var id in TableOrder.Creation)
+        {
+            if (!creators.ContainsKey(id))
+            {
+                throw new InvalidOperationException($"Отсутствует создатель для таблицы {id}.");
+            }
+        }
+
+        // б) открыть одно подключение;
         using var connection = new MySqlConnection(_connectionString);
-        _initializer.Initialize(connection);
+        connection.Open();
+
+        // в) пройти обычным синхронным foreach по TableOrder.Creation и вызвать creators[id](connection) строго по очереди;
+        // Для MariaDB транзакцию не использовать (CREATE TABLE завершает её автоматически);
+        // повторный запуск должен безопасно доделывать недостающие таблицы.
+        foreach (var id in TableOrder.Creation)
+        {
+            try
+            {
+                // г) каждый вызов обернуть в try/catch и при ошибке выбросить InvalidOperationException
+                // с названием таблицы ($"Не удалось создать таблицу {id}") и исходным исключением внутри;
+                // на первой ошибке остановиться и дальше не создавать.
+                creators[id](connection);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Не удалось создать таблицу {id}", ex);
+            }
+        }
     }
 
     public void Initialize(MySqlConnection connection)
     {
-        _initializer.Initialize(connection);
-    }
-
-    public async Task InitializeAsync(CancellationToken cancellationToken = default)
-    {
-        if (string.IsNullOrWhiteSpace(_connectionString))
+        foreach (var id in TableOrder.Creation)
         {
-            throw new InvalidOperationException("Connection string is not configured.");
+            if (!creators.ContainsKey(id))
+            {
+                throw new InvalidOperationException($"Отсутствует создатель для таблицы {id}.");
+            }
         }
 
-        await using var connection = new MySqlConnection(_connectionString);
-        await _initializer.InitializeAsync(connection, cancellationToken);
-    }
+        if (connection.State != System.Data.ConnectionState.Open)
+        {
+            connection.Open();
+        }
 
-    public async Task InitializeAsync(MySqlConnection connection, CancellationToken cancellationToken = default)
-    {
-        await _initializer.InitializeAsync(connection, cancellationToken);
+        foreach (var id in TableOrder.Creation)
+        {
+            try
+            {
+                creators[id](connection);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Не удалось создать таблицу {id}", ex);
+            }
+        }
     }
 }

@@ -1,13 +1,14 @@
 using Microsoft.Data.Sqlite;
-using MyAPP.Common.DB;
+using MyAPP.Common.DB.IDBUnits;
 
 namespace MyAPP.Drivers.SQLite.Tables;
 
 public class CounterpartiesTable : ITableInitializer
 {
-    public TableOrder Id => TableOrder.Counterparties;
-    public int Order => TableCreationOrder.Counterparties;
+    public TableId Id => TableId.CounterpartiesTable;
     public string TableName => "counterparties";
+
+    public static void EnsureTableCreated(SqliteConnection connection) => new CounterpartiesTable().Initialize(connection);
 
     public void Initialize(SqliteConnection connection)
     {
@@ -22,20 +23,5 @@ public class CounterpartiesTable : ITableInitializer
         using var command = connection.CreateCommand();
         command.CommandText = sql;
         command.ExecuteNonQuery();
-    }
-
-    public async Task InitializeAsync(SqliteConnection connection, CancellationToken cancellationToken = default)
-    {
-        const string sql = """
-            CREATE TABLE IF NOT EXISTS counterparties (
-                counterparty_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                type TEXT NOT NULL
-            );
-            """;
-
-        await using var command = connection.CreateCommand();
-        command.CommandText = sql;
-        await command.ExecuteNonQueryAsync(cancellationToken);
     }
 }
