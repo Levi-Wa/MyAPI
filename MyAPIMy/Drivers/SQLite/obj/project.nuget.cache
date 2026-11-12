@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/1kWEQ278Rg=",
+  "dgSpecHash": "X0GAtY0UKj4=",
   "success": true,
-  "projectFilePath": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Drivers\\SQLite\\SQLite.csproj",
+  "projectFilePath": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Drivers\\SQLite\\SQLite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.data.sqlite\\10.0.14\\microsoft.data.sqlite.10.0.14.nupkg.sha512",
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.14\\microsoft.data.sqlite.core.10.0.14.nupkg.sha512",

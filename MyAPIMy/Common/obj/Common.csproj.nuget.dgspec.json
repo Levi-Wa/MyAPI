@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj": {}
+    "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj": {}
   },
   "projects": {
-    "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj": {
+    "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj",
+        "projectPath": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Levichan\\.nuget\\packages\\",
-        "outputPath": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\obj\\",
+        "outputPath": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

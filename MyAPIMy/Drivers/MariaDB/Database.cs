@@ -38,7 +38,7 @@ public class Database : IDatabase
             throw new InvalidOperationException("Connection string is not configured.");
         }
 
-        // а) сначала пройти по TableOrder.Creation и проверить, что для каждого TableId есть запись в creators;
+        // сначала пройти по TableOrder.Creation и проверить, что для каждого TableId есть запись в creators;
         // если нет, выбросить InvalidOperationException ещё до создания первой таблицы;
         foreach (var id in TableOrder.Creation)
         {
@@ -48,18 +48,18 @@ public class Database : IDatabase
             }
         }
 
-        // б) открыть одно подключение;
+        // открыть одно подключение;
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        // в) пройти обычным синхронным foreach по TableOrder.Creation и вызвать creators[id](connection) строго по очереди;
+        // пройти обычным синхронным foreach по TableOrder.Creation и вызвать creators[id](connection) строго по очереди;
         // Для MariaDB транзакцию не использовать (CREATE TABLE завершает её автоматически);
         // повторный запуск должен безопасно доделывать недостающие таблицы.
         foreach (var id in TableOrder.Creation)
         {
             try
             {
-                // г) каждый вызов обернуть в try/catch и при ошибке выбросить InvalidOperationException
+                // каждый вызов обернуть в try/catch и при ошибке выбросить InvalidOperationException
                 // с названием таблицы ($"Не удалось создать таблицу {id}") и исходным исключением внутри;
                 // на первой ошибке остановиться и дальше не создавать.
                 creators[id](connection);

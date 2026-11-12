@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sI9Tm7Kg1GY=",
+  "dgSpecHash": "EOOC1bibO6Y=",
   "success": true,
-  "projectFilePath": "c:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\API\\API.csproj",
+  "projectFilePath": "C:\\С#\\Новая папка (2)\\MyAPI\\MyAPIMy\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
     "C:\\Users\\Levichan\\.nuget\\packages\\microsoft.data.sqlite\\10.0.14\\microsoft.data.sqlite.10.0.14.nupkg.sha512",
