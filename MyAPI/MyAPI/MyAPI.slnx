@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Drivers/">
+    <Project Path="Drivers/MariaDB/MariaDB.csproj" />
+    <Project Path="Drivers/SQLite/SQLite.csproj" />
+  </Folder>
+  <Project Path="API/API.csproj" />
+  <Project Path="Common/Common.csproj" />
+</Solution>

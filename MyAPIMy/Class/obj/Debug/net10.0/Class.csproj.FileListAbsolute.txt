@@ -1,0 +1,12 @@
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\bin\Debug\net10.0\Class.deps.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\bin\Debug\net10.0\Class.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\bin\Debug\net10.0\Class.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.GeneratedMSBuildEditorConfig.editorconfig
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.AssemblyInfoInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.AssemblyInfo.cs
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.csproj.CoreCompileInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.sourcelink.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\refint\Class.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\Class.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Class\obj\Debug\net10.0\ref\Class.dll

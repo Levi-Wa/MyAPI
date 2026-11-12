@@ -1,0 +1,12 @@
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\bin\Debug\net10.0\Common.deps.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\bin\Debug\net10.0\Common.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\bin\Debug\net10.0\Common.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.csproj.CoreCompileInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.sourcelink.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\refint\Common.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\Common.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Common\obj\Debug\net10.0\ref\Common.dll

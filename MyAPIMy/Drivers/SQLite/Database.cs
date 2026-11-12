@@ -37,5 +37,21 @@ public class Database : IDatabase
     {
         _initializer.Initialize(connection);
     }
+
+    public async Task InitializeAsync(CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(_connectionString))
+        {
+            throw new InvalidOperationException("Connection string is not configured.");
+        }
+
+        await using var connection = new SqliteConnection(_connectionString);
+        await _initializer.InitializeAsync(connection, cancellationToken);
+    }
+
+    public async Task InitializeAsync(SqliteConnection connection, CancellationToken cancellationToken = default)
+    {
+        await _initializer.InitializeAsync(connection, cancellationToken);
+    }
 }
 

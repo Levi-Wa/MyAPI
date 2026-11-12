@@ -1,0 +1,16 @@
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\bin\Debug\net10.0\SQLite.deps.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\bin\Debug\net10.0\SQLite.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\bin\Debug\net10.0\SQLite.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\bin\Debug\net10.0\Common.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\bin\Debug\net10.0\Common.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.AssemblyReference.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.GeneratedMSBuildEditorConfig.editorconfig
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.AssemblyInfoInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.AssemblyInfo.cs
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.CoreCompileInputs.cache
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.sourcelink.json
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.Up2Date
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\refint\SQLite.dll
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\SQLite.pdb
+c:\С#\Новая папка (2)\MyAPI\MyAPIMy\Drivers\SQLite\obj\Debug\net10.0\ref\SQLite.dll

@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS units_measure (
+    unit_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    symbol VARCHAR(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS counterparties (
+    counterparty_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    type VARCHAR(50)  NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS materials (
+    catalog_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    catalog_number VARCHAR(20)  NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    grade VARCHAR(50)  NOT NULL,
+    profile_size VARCHAR(50)  NOT NULL,
+    unit_id INT UNSIGNED NOT NULL,
+    stock_norm DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS documents (
+    document_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    document_number VARCHAR(50) NOT NULL,
+    record_date DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    counterparty_id INT UNSIGNED NOT NULL,
+    document_type INT NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS material_movements (
+    record_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    document_id INT UNSIGNED NOT NULL,
+    catalog_id INT UNSIGNED NOT NULL,
+    document_price DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
+    income DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
+    expense DECIMAL(14, 4) NOT NULL DEFAULT 0.0000,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
